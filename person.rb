@@ -1,12 +1,12 @@
 require 'securerandom'
 
 class Person
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :parent_permission
   attr_reader :id
 
-  def initialize(name, age, parent_permission)
+  def initialize(age, name = 'Unknown', parent_permission = true)
     @id = SecureRandom.uuid
-    @name = name || 'Unknown'
+    @name = name
     @age = age
     @parent_permission = parent_permission
   end
