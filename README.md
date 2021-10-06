@@ -6,9 +6,6 @@
  -  Add new books.
  -  Save records of who borrowed a given book and when.
 
-## Getting Started
-
-
 
 ## Authors
 
