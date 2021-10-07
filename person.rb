@@ -29,7 +29,3 @@ class Person
     @name = @corrector.correct_name(@name)
   end
 end
-
-denis1 = Person.new(age: 17, name: 'deniswefwfwfwf', parent_permission: true)
-puts denis1.validate_name
-puts denis1.name
