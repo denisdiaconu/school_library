@@ -14,7 +14,7 @@ class Rental
       book.rentals << self unless book.rentals.include?(self)
     end
 
-    def persons=(person)
+    def person=(person)
       @person = person
       person.rentals << self unless person.rentals.include?(self)
     end
