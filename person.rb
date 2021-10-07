@@ -1,4 +1,5 @@
 require 'securerandom'
+require_relative 'corrector'
 
 class Person
   attr_accessor :name, :age, :parent_permission
@@ -9,6 +10,7 @@ class Person
     @name = name
     @age = age
     @parent_permission = parent_permission
+    @corrector = Corrector.new
   end
 
   private
@@ -22,4 +24,12 @@ class Person
   def can_use_services?
     is_of_age? || @parent_permission ? true : false
   end
+
+  def validate_name
+    @name = @corrector.correct_name(@name)
+  end
 end
+
+denis1 = Person.new(age: 17, name: "deniswefwfwfwf", parent_permission: true)
+puts denis1.validate_name
+puts denis1.name
