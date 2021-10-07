@@ -22,10 +22,6 @@ class Person
     @name = @corrector.correct_name(@name)
   end
 
-  def add_rental(rentals)
-    @rentals << rental
-  end
-
   def add_rental(rental)
     @rentals << rental
     rental.person = self
