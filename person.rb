@@ -22,7 +22,7 @@ class Person
     @name = @corrector.correct_name(@name)
   end
 
-  def add_rental(rental)
+  def add_rental(_rentals)
     @rentals << rental
   end
 
